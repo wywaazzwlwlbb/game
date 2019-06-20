@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="libs/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <style>
+        .row{margin:0}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="row align-items-center">
+            <div class="col-3"><img src="img/1.PNG"/></div>
+            <div class="col-2">学生管理系统</div>
+            <div class="col-1"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" id="add">添加学生</button></div>
+        </div>
+        <table class="table thead-default table-bordered mt-5">
+            <thead>
+                <tr>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>课程</th>
+                    <th>班级</th>
+                    <th>电话</th>
+                    <th><img src="img/del.gif"/></th>
+                    <th><img src="img/edt.gif"/></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td><span class="btn bg-info">删除</span></td>
+                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">修改</button></td>
+                </tr> -->
+            </tbody>
+        </table>
+        <div class="pagWarp" id="pageWarp">
+	        <span id="btnL">上一页</span>
+	        <ul id="page">
+	        </ul>
+	        <span id="btnR">下一页</span>
+	    </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">请输入信息：</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">姓名:</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">性别:</label>
+                <textarea class="form-control" id="sex"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">课程:</label>
+                <textarea class="form-control" id="course"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">班级:</label>
+                <textarea class="form-control" id="cla"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">电话:</label>
+                <textarea class="form-control" id="tel"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary mx-auto" data-dismiss="modal" id="send">提交</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+<script src="libs/jquery.js"></script>
+<script src="libs/popper.js"></script>
+<script src="libs/bootstrap.js"></script>
+<script src="js/ajax.3.0.js"></script>
+<script src="js/index.js"></script>
+</html>
